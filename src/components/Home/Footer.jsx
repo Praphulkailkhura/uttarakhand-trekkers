@@ -1,5 +1,5 @@
 import styles from "../../styles/Footer.module.css"
-import logo from "../../assets/logo.png"
+import logo from "../../assets/Logo.png"
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa"
 
 function Footer() {
