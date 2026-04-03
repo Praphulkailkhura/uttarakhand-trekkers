@@ -1,0 +1,113 @@
+.permitSection{
+  padding:100px 20px;
+  background: white;
+}
+
+.permitContainer{
+  max-width:1150px;
+  margin:auto;
+
+  display:flex;
+  gap:50px;
+  align-items:center;
+}
+
+.permitImage img{
+  width: 100%;
+  border-radius: 0 40% 0 0;
+  /* border-radius: 20px; */
+  object-fit: cover;
+}
+
+.permitContent h2{
+  font-size:48px;
+  margin-bottom:20px;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.highlight{
+  font-size: 60px;
+  color:#E46C39;
+  font-family: "Cormorant Garamond", figtree;
+  font-style: italic;
+}
+
+
+.permitContent p{
+  font-size: 17px;
+  margin-bottom:15px;
+  line-height:1.6;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.permitBtn{
+  font-size: 17px;
+  margin-top:20px;
+  padding:12px 25px;
+  background:#E46C39;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1024px) {
+
+  .permitContainer {
+    gap: 30px;
+  }
+
+  .permitContent h2 {
+    font-size: 36px;
+  }
+
+  .permitContent p {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .permitSection{
+    padding: 50px 20px;
+  }
+
+  .permitContainer {
+    flex-direction: column-reverse; /* 🔥 main fix */
+    gap: 30px;
+  }
+
+  /* .permitImage{
+    max-width: 20vmax;
+  } */
+
+  .permitImage img {
+    border-radius: 12px; /* clean look */
+  }
+
+  .permitContent {
+    text-align: center;
+  }
+
+  .permitContent h2 {
+    font-size: 34px;
+  }
+
+
+  .highlight{
+    font-size: 40px;
+  }
+  .permitContent p {
+    font-size: 15px;
+  }
+
+  .permitBtn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+}

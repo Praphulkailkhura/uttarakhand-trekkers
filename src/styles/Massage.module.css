@@ -1,0 +1,138 @@
+.massageSection{
+  padding:80px 20px;
+  background:#000000;
+}
+
+.massageContainer{
+  max-width:1200px;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:60px;
+}
+
+.massageImage{
+  width: 50%;
+}
+
+.massageImage img{
+  width:100%;
+  border-radius:12px;
+}
+
+.massageContent{
+  flex:1;
+}
+
+.title{
+  font-size:48px;
+  margin-bottom:20px;
+}
+
+.title span{
+  font-family: "Cormorant Garamond", figtree;
+  font-style: italic;
+  color: #E46C39;
+  font-size: 60px;
+}
+
+
+.description{
+  margin-bottom:20px;
+  line-height:1.6;
+  font-size: 17px;
+}
+
+.benefits{
+  margin-bottom:25px;
+
+}
+
+.benefits li{
+  margin-bottom:10px;
+  list-style:disc;
+  font-size: 16px;
+}
+
+.bookBtn{
+  display:inline-block;
+  padding:12px 25px;
+  background:#E46C39;
+  color:white;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:500;
+  font-size: 16px;
+}
+
+.bookBtn:hover{
+  background:#d65d2f;
+}
+
+@media (max-width: 1024px) {
+
+  .massageContainer {
+    gap: 40px;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .title span {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .massageSection{
+    padding: 40px 20px;
+  }
+
+  .massageContainer {
+    flex-direction: column-reverse; /* 🔥 content upar */
+    gap: 30px;
+  }
+
+  .massageImage {
+    width: 100%;
+  }
+
+  .massageContent {
+    text-align: center;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .title span {
+    font-size: 50px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .benefits {
+    text-align: left; /* better readability */
+    padding-left: 20px;
+  }
+
+  .benefits li {
+    font-size: 14px;
+  }
+
+  .bookBtn {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+}
