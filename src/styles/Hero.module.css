@@ -19,7 +19,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.45);
+  background: rgba(0, 0, 0, 0.45);
 }
 
 .heroContent {
@@ -45,7 +45,7 @@
 
 .highlight {
   font-size: 120px;
-  color: #E46C39;
+  color: #e46c39;
   font-family: "Cormorant Garamond", figtree;
   font-style: italic;
 }
@@ -55,19 +55,27 @@
   margin-top: 10px;
 }
 
-.heroBtn {
-  margin-top: 40px;
-  padding: 12px 25px;
-  font-size: 18px;
-  background: #E46C39;
-  color: white;
-  border-radius: 6px;
+.btnGroup {
+  padding-top: 20px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
+.heroBtn {
+  /* margin-top: 40px; */
+  padding: 12px 25px;
+  font-size: 18px;
+  background: #e46c39;
+  color: white;
+  border-radius: 6px;
+  border: none;
+}
 
 /* TABLET */
 @media (max-width: 1024px) {
-
   .heroContent {
     padding-top: 100px;
   }
@@ -85,16 +93,14 @@
     font-size: 24px;
   }
 
-    .heroBtn {
+  .heroBtn {
     font-size: 20px;
     padding: 10px 18px;
-   
   }
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
-
   .heroContent {
     padding: 80px 15px 0;
   }
@@ -112,9 +118,13 @@
     font-size: 16px;
   }
 
+  .btnGroup {
+    flex-direction: column;
+  }
+
   .heroBtn {
     font-size: 14px;
     padding: 10px 18px;
-   
+    border: none;
   }
 }
