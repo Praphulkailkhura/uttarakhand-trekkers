@@ -1,8 +1,8 @@
 import styles from "../../styles/Gallery.module.css"
 
-import img1 from "../../assets/gallery/Big1.jpg"
+import img1 from "../../assets/gallery/big1.jpg"
 import img2 from "../../assets/gallery/small1.jpg"
-import img3 from "../../assets/gallery/Big2.jpg"
+import img3 from "../../assets/gallery/big2.jpg"
 import img4 from "../../assets/gallery/small2.jpg"
 
 function Gallery(){
