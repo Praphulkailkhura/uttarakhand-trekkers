@@ -1,4 +1,4 @@
-import CharDham from "../../assets/services/CharDham.jpeg";
+import CharDham from "../../assets/services/charDham.jpeg";
 import Vehicle from "../../assets/services/VehicleBooking.jpeg";
 import Tour from "../../assets/services/uttarkashi.jpeg";
 import Stay from "../../assets/services/food_stay.jpeg";
