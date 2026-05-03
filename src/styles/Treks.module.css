@@ -1,164 +1,173 @@
-.treksSection{
-  padding:80px 20px;
-  background:rgb(0, 0, 0);
+.treksSection {
+  padding: 60px 20px;
+  position: relative;
 }
 
-.treksContainer{
-  max-width:1200px;
-  margin:auto;
+.treksSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
 }
 
-.sectionTitle{
-  text-align:center;
-  font-size:48px;
-  margin-bottom:50px;
+.treksContainer {
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADING */
+.sectionTitle {
+  text-align: center;
+  font-size: 46px;
+  margin-bottom: 10px;
   color: #fff;
 }
 
-.highlight{
-  font-size: 80px;
-  color:#E46C39;
+.highlight {
+  font-size: 56px;
+  color: #E46C39;
   font-family: "Cormorant Garamond", figtree;
   font-style: italic;
 }
 
-
-.treksGrid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
+/* SUBTEXT */
+.sectionSubtext {
+  text-align: center;
+  font-size: 18px;
+  color: #d1d5db;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  line-height: 1.6;
 }
 
-.trekCard{
-  border-radius:12px;
-  overflow:hidden;
-  background:white;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:0.3s;
+/* GRID */
+.treksGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.trekCard:hover{
-  transform:translateY(-6px);
+/* CARD */
+.trekCard {
+  display: flex;
+  flex-direction: column;
+  height: 470px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #303030;
+  backdrop-filter: blur(6px);
+
+  border: 1px solid rgba(129, 124, 124, 0.2);
+
+  transition: all 0.3s ease;
 }
 
-.trekCard img{
-  width:100%;
-  height:230px;
-  object-fit:cover;
+.trekCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    border-color:#E46C39;
 }
 
-.trekContent{
-  padding:20px;
-  text-align:center;
-}
-
-.trekContent h3{
-  margin-bottom:10px;
-  color:#000000;
-  font-size: 24px;
-}
-
-.trekContent p{
-  font-size:17px;
-  color:#555;
-}
-
-.treksSection{
-  padding:80px 20px;
-  background:rgb(0, 0, 0);
-}
-
-.treksContainer{
-  max-width:1200px;
-  margin:auto;
-}
-
-.sectionTitle{
-  text-align:center;
-  font-size:48px;
-  margin-bottom:50px;
-  color: #fff;
-}
-
-.highlight{
-  font-size: 80px;
-  color:#E46C39;
-  font-family: "Cormorant Garamond", figtree;
-  font-style: italic;
-}
-
-
-.treksGrid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:30px;
-}
-
-.trekCard{
-  border-radius:12px;
-  overflow:hidden;
-  background:white;
-  box-shadow:0 10px 25px rgba(0,0,0,0.1);
-  transition:0.3s;
-}
-
-.trekCard:hover{
-  transform:translateY(-6px);
-}
-
-.trekCard img{
-  width:100%;
-  height:230px;
+/* IMAGE */
+.trekCard img {
+  padding: 5px;
+  border-radius: 15px;
+  width: 100%;
+  height: 70%;
   object-fit: cover;
-  object-position: top 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
-.trekContent{
-  padding:20px;
-  text-align:center;
+/* CONTENT */
+.cardContent {
+  padding: 16px;
+  text-align: left;
+  height: 40%;
 }
 
-.trekContent h3{
-  margin-bottom:10px;
-  color:#000000;
-  font-size: 24px;
+.cardContent h3 {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 6px;
 }
 
-.trekContent p{
-  font-size:17px;
-  color:#555;
+.cardContent p {
+  font-size: 16px;
+  color: #d1d5db;
+  line-height: 1.5;
+  padding-bottom: 10px;
+}
+
+.trekBtn{
+  padding: 12px 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(56, 53, 53, 0.01);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.trekBtn:hover{
+  background: #E46C39;
+  
+}
+
+
+/* MOBILE */
+@media (max-width: 1024px) {
+  .treksGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
 
-  .treksSection{
+  .treksSection {
     padding: 40px 20px;
   }
 
   .treksGrid {
-    grid-template-columns: 1fr; /* 🔥 1 card */
-    gap: 40px;
+    grid-template-columns: 1fr;
   }
 
   .sectionTitle {
-    font-size: 34px;
-    margin-bottom: 30px;
+    font-size: 32px;
   }
 
   .highlight {
-    font-size: 50px;
+    font-size: 40px;
   }
 
-  .trekCard img {
-    height: 200px;
+  .sectionSubtext {
+    font-size: 14px;
+    margin-bottom: 30px;
   }
 
-  .trekContent h3 {
-    font-size: 20px;
+  .cardContent h3 {
+    font-size: 16px;
   }
 
-  .trekContent p {
-    font-size: 15px;
+  .cardContent p {
+    font-size: 13px;
   }
-
 }

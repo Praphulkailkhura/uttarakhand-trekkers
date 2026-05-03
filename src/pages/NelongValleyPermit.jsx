@@ -1,9 +1,10 @@
-import Facilitator from "../components/NelongPermit/Facilitator";
+// import Facilitator from "../components/NelongPermit/Facilitator";
 import NelongHero from "../components/NelongPermit/NelongHero";
 import NelongInfo from "../components/NelongPermit/NelongInfo";
 import Process from "../components/NelongPermit/Process";
 import Reviews from "../components/NelongPermit/Reviews";
 import Step from "../components/NelongPermit/Step";
+import Faq from "../components/NelongPermit/Faq";
 
 
 const NelongValleyPermit = () => {
@@ -13,7 +14,8 @@ const NelongValleyPermit = () => {
     <NelongInfo />
     <Process />
     <Step />
-    <Facilitator />
+    {/* <Facilitator /> */}
+    <Faq />
     
     </>
   )

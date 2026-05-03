@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styles from "../../styles/Services.module.css";
 import chardham from "../../assets/services/chardham.jpg";
 import vehicle from "../../assets/services/vehicle.jpg";
@@ -5,85 +6,72 @@ import tours from "../../assets/services/uttarkashi.jpeg";
 import foodstay from "../../assets/services/stay.jpg"
 
 function Services() {
+  const navigate = useNavigate();
+
   return (
     <section className={styles.servicesSection} id="services">
-      <div className={styles.servicesContainer}>
-        <h2 className={styles.sectionTitle}>
-          <span className={styles.highlight}>Our</span> Services
-        </h2>
+  <div className={styles.servicesContainer}>
 
-        <div className={styles.servicesGrid}>
-          <div className={styles.servicesCard}>
-            <img src={chardham} alt="Char Dham Yatra" />
-            <div className={styles.servicesContent}>
-              <h3>Char Dham Yatra</h3>
-              <p>Experience the sacred Char Dham pilgrimage in Uttarakhand.</p>
+    <h2 className={styles.sectionTitle}>
+      Best <span className={styles.highlight}>Travel Services</span> in Uttarakhand
+    </h2>
 
-              <a
-                href="https://wa.me/918923259390?text=I%20want%20information%20about%20Char%20Dham%20Yatra"
-                className={styles.contactBtn}
-                target="_blank"
-              >
-                Contact Now
-              </a>
-            </div>
-          </div>
+    <p className={styles.subText}>
+      We provide complete travel and trekking services in Uttarakhand including Char Dham Yatra packages, vehicle booking, Uttarkashi tours, and food & stay arrangements.
+    </p>
 
-          <div className={styles.servicesCard}>
-            <img src={vehicle} alt="Vehicle Booking" />
-            <div className={styles.servicesContent}>
-              <h3>Vehicle Booking</h3>
-              <p>Comfortable vehicles available for treks and tours.</p>
+    <div className={styles.servicesGrid}>
 
-              <a
-                href="https://wa.me/918923259390?text=I%20want%20vehicle%20booking%20information"
-                className={styles.contactBtn}
-                target="_blank"
-              >
-                Contact Now
-              </a>
-            </div>
-          </div>
+      {[
+        {
+          img: chardham,
+          title: "Char Dham Yatra Package",
+          desc: "Complete Char Dham Yatra packages covering Kedarnath, Badrinath, Gangotri and Yamunotri with travel and stay.",
+          link: "I%20want%20Char%20Dham%20Yatra%20package%20details",
+          slug: "char-dham-yatra-package"
+        },
+        {
+          img: vehicle,
+          title: "Vehicle Booking in Uttarkashi",
+          desc: "Book taxis, tempo travellers and SUVs for treks, tours and Char Dham Yatra with experienced drivers.",
+          link: "I%20want%20vehicle%20booking%20in%20Uttarkashi",
+          slug: "vehicle-booking-uttarkashi"
+        },
+        {
+          img: tours,
+          title: "Uttarkashi Tour Packages",
+          desc: "Explore Uttarkashi with guided tour packages including sightseeing, treks and hidden destinations.",
+          link: "I%20want%20Uttarkashi%20tour%20packages",
+          slug: "uttarkashi-tour-packages"
+        },
+        {
+          img: foodstay,
+          title: "Food & Stay in Uttarkashi",
+          desc: "Comfortable stays and hygienic food options available for trekkers and travelers in Uttarkashi.",
+          link: "I%20want%20food%20and%20stay%20in%20Uttarkashi",
+          slug: "food-stay-uttarkashi"
+        }
+      ].map((service, index) => (
+        <div className={styles.servicesCard} key={index}>
+          <img src={service.img} alt={service.title} />
 
-          <div className={styles.servicesCard}>
-            <img src={tours} alt="Uttarkashi Tours" />
-            <div className={styles.servicesContent}>
-              <h3>Uttarkashi Tours</h3>
-              <p>Explore beautiful destinations around Uttarkashi.</p>
+          <div className={styles.servicesContent}>
+            <h3>{service.title}</h3>
+            <p>{service.desc}</p>
 
-              <a
-                href="https://wa.me/918923259390?text=I%20want%20Uttarkashi%20tour%20details"
-                className={styles.contactBtn}
-                target="_blank"
-              >
-                Contact Now
-              </a>
-            </div>
-          </div>
-
-          <div className={styles.servicesCard}>
-            <img src={foodstay} alt="Food and Stay in Uttarkashi" />
-
-            <div className={styles.servicesContent}>
-              <h3>Food & Stay</h3>
-
-              <p>
-                Comfortable stay and delicious local food available in
-                Uttarkashi for trekkers and travelers.
-              </p>
-
-              <a
-                href="https://wa.me/918923259390?text=I%20want%20food%20and%20stay%20in%20Uttarkashi"
-                className={styles.contactBtn}
-                target="_blank"
-              >
-                Contact Now
-              </a>
-            </div>
+            <button
+  onClick={() => navigate(`/services#${service.slug}`)}
+  className={styles.contactBtn}
+>
+  View Details
+</button>
           </div>
         </div>
-      </div>
-    </section>
+      ))}
+
+    </div>
+  </div>
+</section>
   );
 }
 

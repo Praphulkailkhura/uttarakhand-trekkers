@@ -6,25 +6,76 @@ import img3 from "../../assets/gallery/big2.jpg"
 import img4 from "../../assets/gallery/small2.jpg"
 
 function Gallery(){
+
+  const galleryData = [
+    {
+      img: img1,
+      className: "big",
+      alt: "Dayara Bugyal mountain view in Uttarkashi Uttarakhand Himalayas",
+      caption: "Dayara Bugyal trek scenic view in Uttarkashi"
+    },
+    {
+      img: img2,
+      className: "small",
+      alt: "Himalayan trekking trail in Uttarkashi with forest and mountains",
+      caption: "Trekking trail in Uttarkashi Uttarakhand"
+    },
+    {
+      img: img4,
+      className: "small",
+      alt: "Mountain valley and trail view in Uttarakhand Himalayas",
+      caption: "Beautiful valley view in Uttarkashi"
+    },
+    {
+      img: img3,
+      className: "big",
+      alt: "Panoramic Himalayan landscape in Uttarkashi Uttarakhand",
+      caption: "Himalayan landscape view in Uttarkashi"
+    }
+  ]
+
   return(
 
-    <section className={styles.gallerySection}>
+    <section 
+      className={styles.gallerySection}
+      id="gallery"
+      aria-labelledby="gallery-heading"
+    >
 
       <div className={styles.galleryContainer}>
 
-        <h2 className={styles.title}>
-        <span className={styles.highlight}>Explore</span> Uttarkashi
+        {/* SEO HEADING */}
+        <h2 id="gallery-heading" className={styles.sectionTitle}>
+          Uttarkashi Travel <span className={styles.highlight}>Gallery</span>
         </h2>
 
+        {/* SEO SUBTEXT */}
+        <p className={styles.subText}>
+          Explore stunning views of Uttarkashi, including Himalayan mountains,
+          trekking routes, valleys, and natural landscapes. Discover the beauty
+          of Uttarakhand through real travel experiences and scenic destinations.
+        </p>
+
+        {/* GALLERY */}
         <div className={styles.galleryGrid}>
 
-          <img src={img1} className={styles.big} alt="Uttarkashi view"/>
+          {galleryData.map((item, index) => (
+            <figure key={index} className={styles[item.className]}>
 
-          <img src={img2} className={styles.small} alt="Himalayan trek"/>
+            <div className={styles.galleryCard}>
+              <img
+                src={item.img}
+                alt={item.alt}
+                loading="lazy"
+              />
+</div>  
+              {/* hidden SEO caption */}
+              <figcaption className={styles.visuallyHidden}>
+                {item.caption}
+              </figcaption>
 
-          <img src={img4} className={styles.small} alt="Mountain trail"/>
-
-          <img src={img3} className={styles.big} alt="Himalayan landscape"/>
+            </figure>
+          ))}
 
         </div>
 

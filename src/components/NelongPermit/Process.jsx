@@ -1,4 +1,4 @@
-import styles from "../../styles/Process.module.css"
+import styles from "../../styles/Process.module.css";
 
 function Process(){
   return(
@@ -11,31 +11,17 @@ function Process(){
           Process to Get <span className={styles.highlight}>Nelong Valley Permit</span>
         </h2>
 
-        <ul className={styles.list}>
+        <div className={styles.steps}>
 
-          <li>Step 1: Write an Application to the DM of Uttarkashi</li>
+          <div className={styles.step}>Step 1: Write an Application to the DM of Uttarkashi</div>
 
-          <li>Step 2: Visit District Collectorate</li>
+          <div className={styles.step}>Step 2: Visit District Collectorate</div>
 
-          <li>
-            Step 3: Take your application and signed letter to District Thana
-          </li>
+          <div className={styles.step}>Step 3: Police Verification at District Thana</div>
 
-          <li>Step 4: Visit the District Collectorate Again</li>
+          <div className={styles.step}>Step 4: Visit District Collectorate Again</div>
 
-          <li>Important Points to Keep in Mind</li>
-
-          <li>Enquire For Nelong Valley Permit</li>
-
-        </ul>
-
-        {/* <a
-          href="https://wa.me/918923259390?text=I%20want%20Nelong%20Valley%20permit"
-          target="_blank"
-          className={styles.btn}
-        >
-          Get Permit Now
-        </a> */}
+        </div>
 
       </div>
 
@@ -44,4 +30,4 @@ function Process(){
   )
 }
 
-export default Process
+export default Process;

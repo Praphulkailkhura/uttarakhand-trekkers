@@ -1,73 +1,112 @@
 .massageSection{
-  padding:80px 20px;
-  background:#000000;
+  padding:60px 20px;
+  position: relative;
 }
 
-.massageContainer{
-  max-width:1200px;
-  margin:auto;
+.massageSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
 
-  display:flex;
-  align-items:center;
-  gap:60px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
 }
 
-.massageImage{
+.massageContainer {
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: stretch; /* 🔥 CHANGE */
+  gap: 60px;
+}
+
+/* IMAGE WRAPPER */
+.massageImage {
   width: 50%;
+  height: auto;
+  display: flex;
 }
 
-.massageImage img{
-  width:100%;
-  border-radius:12px;
+/* IMAGE */
+.massageImage img {
+  width: 100%;
+  height: 100%; /* 🔥 MAIN FIX */
+  object-fit: cover; /* 🔥 crop + fill */
+  border-radius: 12px;
 }
 
 .massageContent{
   flex:1;
 }
 
-.title{
-  font-size:48px;
-  margin-bottom:20px;
+/* TITLE */
+.title {
+  font-size: 46px;
+  line-height: 1.2;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 18px;
 }
 
-.title span{
+.title span {
+  font-size: 56px;
   font-family: "Cormorant Garamond", figtree;
   font-style: italic;
   color: #E46C39;
-  font-size: 60px;
 }
 
-
-.description{
-  margin-bottom:20px;
-  line-height:1.6;
-  font-size: 17px;
+/* DESCRIPTION */
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #d1d5db;
+  margin-bottom: 18px;
+  max-width: 600px;
 }
 
-.benefits{
-  margin-bottom:25px;
-
+/* BENEFITS LIST */
+.benefits {
+  margin-bottom: 24px;
+  padding-left: 18px;
 }
 
-.benefits li{
-  margin-bottom:10px;
-  list-style:disc;
+.benefits li {
   font-size: 16px;
+  line-height: 1.6;
+  color: #d1d5db;
+  margin-bottom: 8px;
 }
 
-.bookBtn{
-  display:inline-block;
-  padding:12px 25px;
-  background:#E46C39;
-  color:white;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:500;
+/* BUTTON */
+.bookBtn {
+  display: inline-block;
+
+  padding: 10px 22px;
   font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.2);
+
+  background: transparent;
+  color: white;
+
+  transition: all 0.3s ease;
 }
 
-.bookBtn:hover{
-  background:#d65d2f;
+.bookBtn:hover {
+  background: #E46C39;
+  box-shadow: 0 8px 20px rgba(228,108,57,0.4);
 }
 
 @media (max-width: 1024px) {

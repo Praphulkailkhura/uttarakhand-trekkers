@@ -1,6 +1,24 @@
 .contactSection{
-  padding:80px 20px;
-  background:#000;
+  padding:60px 20px;
+  position: relative;
+}
+
+/* divider */
+.contactSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
 }
 
 .contactContainer{
@@ -8,117 +26,163 @@
   margin:auto;
 }
 
+/* HEADING */
 .title{
   text-align:center;
-  font-size:48px;
-  margin-bottom:60px;
+  font-size:46px;
+  margin-bottom:10px;
+  color:#fff;
 }
 
 .highlight{
-  font-size: 70px;
+  font-size:56px;
   color:#E46C39;
-  font-family: "Cormorant Garamond", figtree;
-  font-style: italic;
+  font-family:"Cormorant Garamond", figtree;
+  font-style:italic;
 }
 
-.link{
-  color: #E46C39;
+/* SUBTEXT */
+.subText{
+  text-align:center;
+  max-width:800px;
+  margin:0 auto 50px;
+  color:#d1d5db;
+  font-size:18px;
+  line-height:1.6;
 }
 
-.link:hover{
-  color: blue;
-}
-
-
+/* GRID */
 .contactGrid{
   display:grid;
   grid-template-columns:1fr 1fr;
-  gap:40px;
+  gap:10px;
 }
 
+/* INFO */
 .contactInfo p{
-  margin-bottom:15px;
-  font-size: 20px;
+  margin-bottom:25px;
+  font-size:18px;
+  color:#ffffff;
 }
 
+.link{
+  color:#d1d5db;
+  text-decoration:none;
+  font-size: 18px;
+}
+
+.link:hover{
+  text-decoration:underline;
+}
+
+/* BUTTON GROUP */
+.btnGroup{
+  margin-top:30px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+/* PRIMARY BTN */
 .contactBtn{
+  padding:10px 22px;
+  border-radius:999px;
   font-size: 16px;
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
+  letter-spacing: 1px;
+
   background:#E46C39;
   color:white;
   text-decoration:none;
-  border-radius:6px;
+
+  transition:0.3s;
 }
 
+.contactBtn:hover{
+  background:#cf5d2f;
+}
+
+/* SECONDARY BTN (Instagram) */
+.secondaryBtn{
+  padding:10px 22px;
+  border-radius:999px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  border:1px solid rgba(255,255,255,0.2);
+  color:white;
+  text-decoration:none;
+
+  transition:0.3s;
+}
+
+.secondaryBtn:hover{
+  background:#E46C39;
+  border-color:#E46C39;
+}
+
+/* MAP */
 .map iframe{
   width:100%;
-  height:300px;
+  height:320px;
   border:none;
-  border-radius:10px;
+  border-radius:12px;
 }
 
-@media (max-width: 1024px) {
+/* ================= TABLET ================= */
+@media (max-width:1024px){
 
-  .contactGrid {
-    gap: 25px;
+  .contactGrid{
+    gap:25px;
   }
 
-  .title {
-    font-size: 36px;
+  .title{
+    font-size:36px;
   }
 
-  .highlight {
-    font-size: 50px;
+  .highlight{
+    font-size:48px;
   }
 
-  .contactInfo p {
-    font-size: 18px;
-  }
-
-  .map iframe {
-    height: 260px;
+  .contactInfo p{
+    font-size:16px;
   }
 
 }
 
-@media (max-width: 768px) {
+/* ================= MOBILE ================= */
+@media (max-width:768px){
 
   .contactSection{
-    padding: 40px 20px;
+    padding:40px 20px;
   }
 
-
-  .contactGrid {
-    grid-template-columns: 1fr; /* 🔥 1 column */
-    gap: 30px;
+  .contactGrid{
+    grid-template-columns:1fr;
+    gap:30px;
   }
 
-  .contactInfo {
-    text-align: center;
+  .contactInfo{
+    text-align:center;
   }
 
-  .title {
-    font-size: 34px;
-    margin-bottom: 30px;
+  .btnGroup{
+    justify-content:center;
   }
 
-  .highlight {
-    font-size: 50px;
+  .title{
+    font-size:32px;
   }
 
-  .contactInfo p {
-    font-size: 16px;
+  .highlight{
+    font-size:42px;
   }
 
-  .contactBtn {
-    font-size: 14px;
-    padding: 10px 18px;
+  .subText{
+    font-size:14px;
+    margin-bottom:30px;
   }
 
-  .map iframe {
-    height: 220px;
+  .map iframe{
+    height:220px;
   }
 
 }

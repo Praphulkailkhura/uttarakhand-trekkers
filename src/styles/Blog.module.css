@@ -1,0 +1,188 @@
+.page {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+}
+
+.heroImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* 🔥 main fix */
+.heroContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+
+  padding: 0 0 40px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  color: white;
+  text-align: left;
+}
+
+/* .heroContent h1 {
+  font-size: 46px;
+  margin-bottom: 10px;
+} */
+
+.highlight {
+  font-size: 46px;
+  font-weight: 900;
+  font-family: "Cormorant Garamond", figtree;
+  font-style: italic;
+  color: #E46C39;
+}
+
+.heroContent p {
+  font-size: 18px;
+  color: #ddd;
+}
+
+
+.section {
+  padding: 60px 20px;
+  position: relative;
+}
+
+.section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+
+.content {
+  margin-bottom: 40px;
+}
+
+.content h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #E46C39;
+   font-weight: 900;
+  font-family: "Cormorant Garamond", figtree;
+  font-style: italic;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+.divider{
+  width:200px;
+  height:1px;
+  margin:15px 0 20px;
+
+  background: linear-gradient(
+    to right,
+    #E46C39,
+    transparent
+  );
+
+  box-shadow:0 0 8px rgba(228,108,57,0.4);
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.list li {
+  font-size: 17px;
+  margin-bottom: 10px;
+  line-height: 1.7;
+  color: #d1d5db;
+}
+
+
+
+@media (max-width: 1024px) {
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .list li {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 30px 20px;
+  }
+
+  .hero {
+    height: 50vh;
+  }
+
+  .heroContent {
+   padding: 20px 20px;
+  }
+
+  .heroContent h1 {
+    font-size: 40px;
+  }
+
+  .heroContent p {
+    font-size: 14px;
+  }
+
+  .content h2 {
+    font-size: 28px;
+  }
+
+  .content p {
+    font-size: 15px;
+  }
+
+  .list li {
+    font-size: 14px;
+  }
+}

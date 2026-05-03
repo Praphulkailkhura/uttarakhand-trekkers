@@ -1,5 +1,16 @@
+:root {
+  --h1-size: 80px !important;
+  --h2-size: 46px !important;
+  --h2-mobile: 32px !important;
+}
+
 body{
-  font-family: "Figtree", sans-serif;
+  /* font-family: "monospace",Figtree, sans-serif; */
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  background: #202021;
+  word-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 html, body{
@@ -14,7 +25,8 @@ html, body{
 }
 
 .highlight{
-  font-family: "Cormorant Garamond", figtree;
+  /* font-family: "Cormorant Garamond", figtree; */
   font-style: italic;
 }
+
 

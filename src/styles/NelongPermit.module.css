@@ -1,59 +1,82 @@
-.permitSection{
-  padding:100px 20px;
-  background: white;
+.permitSection {
+  padding: 100px 20px;
 }
 
-.permitContainer{
-  max-width:1150px;
-  margin:auto;
+.permitContainer {
+  max-width: 1150px;
+  margin: auto;
 
-  display:flex;
-  gap:50px;
-  align-items:center;
+  display: flex;
+  gap: 50px;
+  align-items: stretch; /* 🔥 main fix */
 }
 
-.permitImage img{
+.permitImage {
+  flex: 1;
+  max-width: 450px;
+
+  display: flex;
+}
+
+.permitImage img {
   width: 100%;
-  border-radius: 0 40% 0 0;
-  /* border-radius: 20px; */
+  height: 100%; 
   object-fit: cover;
 }
 
-.permitContent h2{
-  font-size:48px;
-  margin-bottom:20px;
-  letter-spacing: 1px;
-  color: black;
+/* CONTENT */
+.permitContent {
+  flex: 1.5;
 }
 
-.highlight{
-  font-size: 60px;
-  color:#E46C39;
+.permitContent h2 {
+  font-size: 46px;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  color: white; 
+}
+
+.highlight {
+  font-size: 56px;
+  color: #E46C39; /* same orange */
   font-family: "Cormorant Garamond", figtree;
   font-style: italic;
 }
 
-
-.permitContent p{
+.permitContent p {
   font-size: 17px;
-  margin-bottom:15px;
-  line-height:1.6;
+  margin-bottom: 15px;
+  line-height: 1.6;
   letter-spacing: 1px;
-  color: black;
+  color: #d1d5db; /* softer white */
 }
 
-.permitBtn{
-  font-size: 17px;
-  margin-top:20px;
-  padding:12px 25px;
-  background:#E46C39;
-  color:white;
-  border:none;
-  border-radius:6px;
-  cursor:pointer;
+/* ✅ BUTTON (same style as hero/navbar feel) */
+.permitBtn {
+  font-size: 16px;
+  margin-top: 20px;
+  padding: 12px 26px;
+
+  border-radius: 999px;
+
+  background: rgba(228, 108, 57, 0.9); /* orange */
+  color: white;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  cursor: pointer;
   letter-spacing: 1px;
+
+  transition: all 0.3s ease;
 }
 
+.permitBtn:hover {
+  transform: translateY(-3px);
+  background: rgba(228, 108, 57, 1);
+  box-shadow: 0 8px 25px rgba(228, 108, 57, 0.4);
+}
+
+/* TABLET */
 @media (max-width: 1024px) {
 
   .permitContainer {
@@ -70,23 +93,25 @@
 
 }
 
+/* MOBILE */
 @media (max-width: 768px) {
 
-  .permitSection{
+  .permitSection {
     padding: 50px 20px;
   }
 
   .permitContainer {
-    flex-direction: column-reverse; /* 🔥 main fix */
+    flex-direction: column-reverse;
     gap: 30px;
   }
 
-  /* .permitImage{
-    max-width: 20vmax;
-  } */
+  .permitImage {
+    max-width: 100%;
+  }
 
   .permitImage img {
-    border-radius: 12px; /* clean look */
+    height: 220px;
+    border-radius: 12px;
   }
 
   .permitContent {
@@ -97,17 +122,17 @@
     font-size: 34px;
   }
 
-
-  .highlight{
+  .highlight {
     font-size: 40px;
   }
+
   .permitContent p {
     font-size: 15px;
   }
 
   .permitBtn {
     font-size: 14px;
-    padding: 10px 18px;
+    padding: 10px 20px;
   }
 
 }

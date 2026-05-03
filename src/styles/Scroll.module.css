@@ -1,0 +1,61 @@
+.scrollSection{
+  padding:40px 0 10px 0;
+  overflow:hidden;
+  position: relative;
+}
+
+/* divider (same theme) */
+.scrollSection::before {
+  content:"";
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:80%;
+  height:1px;
+
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255,255,255,0.3),
+    transparent
+  );
+}
+
+.scrollWrapper{
+  white-space: nowrap;
+}
+
+/* TEXT */
+.scrollText{
+  font-size:100px;
+  font-weight:900;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  font-style: italic;
+
+  color: #e46c39;
+
+  /* -webkit-text-stroke: 1.5px rgba(255,255,255,0.9); */
+}
+
+.copy{
+  text-align:center;
+  border-top:1px solid #444;
+  padding-top:20px;
+  font-size:15px;
+}
+
+/* MOBILE */
+@media (max-width:768px){
+
+  .scrollText{
+    font-size:40px;
+    letter-spacing:2px;
+  }
+
+    .copy {
+    font-size: 13px;
+  }
+
+}

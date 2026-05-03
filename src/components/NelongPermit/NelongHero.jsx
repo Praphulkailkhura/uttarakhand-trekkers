@@ -1,49 +1,57 @@
-import styles from "../../styles/NelongHero.module.css"
-import nelonghero from "../../assets/video/nelonghero.mp4"
-import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
+import styles from "../../styles/NelongHero.module.css";
+import HeroNelong from "../../assets/HeroNelong.jpg";
+import { useNavigate } from "react-router-dom";
 
 function NelongHero() {
+  const navigate = useNavigate();
 
-    const handleWhatsApp = () => {
-    window.open("https://wa.me/918923259390?text=Hi%20I%20want%20Nelong%20Valley%20permit", "_blank");
+  const handleWhatsApp = () => {
+    window.open("https://wa.me/918923259390?text=Hi%20I%20need%20help%20with%20Nelong%20Valley%20permit", "_blank");
   };
 
-  const handleCall = () => {
+    const handleCall = () => {
     window.open("tel:+918923259390");
   };
 
 
   return (
-    <section className={styles.hero}>
+    <section className={styles.nelongHero}>
 
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className={styles.heroVideo}
-      >
-        <source src={nelonghero} type="video/mp4" />
-      </video>
+      <img 
+        src={HeroNelong} 
+        alt="Nelong Valley Uttarakhand near Indo China border" 
+        className={styles.nelongHeroImage} 
+      />
 
-      <div className={styles.heroContent}>
-        <h1>Get Your <span className={styles.highlight}>Nelong Jadung Valley</span> Pass with Us</h1>
+      <div className={styles.nelongHeroContent}>
+        <h1>
+          Get <span className={styles.nelongHighlight}>Nelong Valley </span>Permit in Uttarakhand
+        </h1>
 
-                     <div className={styles.btnGroup}>
-          <button className={styles.heroBtn} onClick={handleWhatsApp}>
-            <FaWhatsapp className={styles.icon} />
-            WhatsApp
+        <p>
+          Complete guide to Nelong Valley permit, process, documents, and travel assistance.
+        </p>
+
+        <div className={styles.nelongBtnGroup}>
+         <button 
+            className={`${styles.nelongBtn} ${styles.primaryBtn}`} 
+            onClick={handleWhatsApp}
+          >
+            Get Help on WhatsApp
           </button>
 
-          <button className={styles.heroBtn} onClick={handleCall}>
-            <FaPhoneAlt className={styles.icon} />
-            Call Now
+          {/* ✅ Secondary Action */}
+          <button 
+            className={`${styles.nelongBtn} ${styles.secondaryBtn}`} 
+            onClick={handleCall}
+          >
+            Call for Assistance
           </button>
         </div>
       </div>
 
     </section>
-  )
+  );
 }
 
-export default NelongHero
+export default NelongHero;

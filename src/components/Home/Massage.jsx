@@ -1,52 +1,69 @@
-import styles from "../../styles/Massage.module.css"
-import massage from "../../assets/massage/massage.jpg"
+import styles from "../../styles/Massage.module.css";
+import massage from "../../assets/massage/massage.jpg";
 
-function Massage(){
-  return(
-
-    <section className={styles.massageSection}>
-
+function Massage() {
+  return (
+    <section
+      className={styles.massageSection}
+      id="massage"
+      aria-labelledby="massage-heading"
+    >
       <div className={styles.massageContainer}>
 
+        {/* IMAGE */}
         <div className={styles.massageImage}>
-          <img src={massage} alt="Massage in Uttarkashi"/>
+          <img
+            src={massage}
+            alt="Professional massage therapy service in Uttarkashi for trekkers and travelers"
+            loading="lazy"
+          />
         </div>
 
+        {/* CONTENT */}
         <div className={styles.massageContent}>
 
-          <h2 className={styles.title}>
-            Massage in <span className={styles.highlight}>Uttarkashi</span>
+          {/* H2 (SEO IMPORTANT) */}
+          <h2 id="massage-heading" className={styles.title}>
+            Massage Service in <span className={styles.highlight}>Uttarkashi</span>
           </h2>
 
+          {/* MAIN KEYWORD PARAGRAPH */}
           <p className={styles.description}>
-            Feeling tired after a long journey or trek? Treat your body with a relaxing massage in Uttarkashi. 
-            Our professional massage therapy helps reduce muscle stiffness, improve blood circulation, 
-            and make you feel fresh and relaxed again.
+            Looking for massage services in Uttarkashi after trekking or long travel? 
+            Our professional massage therapy in Uttarkashi helps reduce muscle pain, 
+            improve blood circulation, and provide deep relaxation for trekkers and travelers.
           </p>
 
+          {/* SECONDARY KEYWORDS */}
+          <p className={styles.description}>
+            We offer relaxing body massage in Uttarkashi designed for recovery after Himalayan treks, 
+            helping you feel refreshed, stress-free, and energized.
+          </p>
+
+          {/* BENEFITS (UL SEO FRIENDLY) */}
           <ul className={styles.benefits}>
-            <li>Reduce muscle tension and soreness</li>
-            <li>Boost blood circulation for faster recovery</li>
-            <li>Relieve stress and improve mental clarity</li>
-            <li>Improve flexibility and joint mobility</li>
-            <li>Enhance sleep quality for better rest</li>
+            <li>Reduce muscle tension and post-trek soreness</li>
+            <li>Improve blood circulation and body recovery</li>
+            <li>Relieve stress and mental fatigue</li>
+            <li>Increase flexibility and joint movement</li>
+            <li>Promote better sleep and relaxation</li>
           </ul>
 
+          {/* CTA */}
           <a
-            href="https://wa.me/918923259390?text=I%20want%20to%20book%20massage%20in%20Uttarkashi"
+            href="https://wa.me/918923259390?text=I%20want%20to%20book%20massage%20service%20in%20Uttarkashi"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles.bookBtn}
           >
-            Book Massage
+            Book Massage in Uttarkashi
           </a>
 
         </div>
 
       </div>
-
     </section>
-
-  )
+  );
 }
 
-export default Massage
+export default Massage;

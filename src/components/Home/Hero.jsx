@@ -1,5 +1,5 @@
 import styles from "../../styles/Hero.module.css";
-import heroVideo from "../../assets/video/hero-video.mp4";
+import heroImage from "../../assets/heroImage.jpg"
 import { useNavigate } from "react-router-dom";
 
 function Hero() {
@@ -10,26 +10,29 @@ function Hero() {
   };
   return (
     <section className={styles.hero}>
-      <video autoPlay loop muted playsInline className={styles.heroVideo}>
-        <source src={heroVideo} type="video/mp4" />
-      </video>
+
+  <img 
+    src={heroImage} 
+    alt="Treks in Uttarakhand mountains" 
+    className={styles.heroImage} 
+  />
 
       <div className={styles.heroContent}>
         <h1>
           Explore <span className={styles.highlight}>Treks</span> in Uttarakhand
         </h1>
-        <p>Nelong Valley Permit • Treks • Travel</p>
+        <p>Complete guide on how to get Nelong Valley Permit, best time to visit, and travel assistance.</p>
 
         <div className={styles.btnGroup}>
           <button
-            className={styles.heroBtn}
+            className={`${styles.heroBtn} ${styles.primaryBtn}`}
             onClick={() => navigate("/NelongValleyPermit")}
           >
-            Get Nelong Valley Permit
+            Apply for Nelong Valley Permit
           </button>
 
-          <button className={styles.heroBtn} onClick={handleWhatsApp}>
-            Contact Now
+          <button className={`${styles.heroBtn} ${styles.secondaryBtn}`} onClick={handleWhatsApp}>
+            Chat on WhatsApp
           </button>
         </div>
       </div>

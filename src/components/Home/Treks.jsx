@@ -1,65 +1,85 @@
 import styles from "../../styles/Treks.module.css";
+import { useNavigate } from "react-router-dom";
+
 import dayara from "../../assets/treks/dayara.jpg";
 import jorai from "../../assets/treks/jorai.jpg";
 import dodital from "../../assets/treks/dodital.jpg";
 import gomukh from "../../assets/treks/gomukh.jpg";
-import tungnath from "../../assets/treks/tungnath.jpg"
+import tungnath from "../../assets/treks/tungnath.jpg";
+
 function Treks() {
+  const navigate = useNavigate();
+
+  const treks = [
+    {
+      name: "Dayara Bugyal Trek",
+      slug: "dayara-bugyal-trek",
+      image: dayara,
+      desc: "Dayara Bugyal trek in Uttarakhand is a famous alpine meadow trek ideal for beginners and nature lovers.",
+    },
+    {
+      name: "Jorai Bugyal Trek",
+      slug: "jorai-bugyal-trek",
+      image: jorai,
+      desc: "Jorai Bugyal trek in Uttarkashi offers peaceful trails and stunning Himalayan views.",
+    },
+    {
+      name: "Dodital Trek",
+      slug: "dodital-trek",
+      image: dodital,
+      desc: "Dodital trek is a scenic lake trek in Uttarakhand surrounded by forests and mountains.",
+    },
+    {
+      name: "Gomukh Tapovan Trek",
+      slug: "gomukh-tapovan-trek",
+      image: gomukh,
+      desc: "Gomukh Tapovan trek leads to the source of River Ganga with breathtaking Himalayan landscapes.",
+    },
+    {
+      name: "Tungnath Trek",
+      slug: "tungnath-trek",
+      image: tungnath,
+      desc: "Tungnath trek takes you to the highest Shiva temple with panoramic mountain views.",
+    },
+  ];
+
   return (
     <section className={styles.treksSection} id="treks">
       <div className={styles.treksContainer}>
+
+        {/* MAIN HEADING */}
         <h2 className={styles.sectionTitle}>
-          <span className={styles.highlight}>Treks</span> With Us
+          Best <span className={styles.highlight}>Treks</span> in Uttarakhand
         </h2>
 
+        {/* SEO SUBTEXT */}
+        <p className={styles.sectionSubtext}>
+           Discover the most beautiful treks in Uttarakhand with breathtaking views.
+        </p>
+
+        {/* LIST (SEO IMPORTANT) */}
         <div className={styles.treksGrid}>
-          <div className={styles.trekCard}>
-            <img src={dayara} alt="Dayara Bugyal" />
-            <div className={styles.trekContent}>
-              <h3>Dayara Bugyal</h3>
-              <p>One of the most beautiful alpine meadows in Uttarakhand.</p>
-            </div>
-          </div>
+          {treks.map((trek, index) => (
+            <article
+              key={index}
+              className={styles.trekCard}
+              onClick={() => navigate(`/treks/${trek.slug}`)}
+            >
+              <img
+                src={trek.image}
+                alt={`${trek.name} in Uttarakhand`}
+                loading="lazy"
+              />
 
-          <div className={styles.trekCard}>
-            <img src={jorai} alt="Jorai Bugyal" />
-            <div className={styles.trekContent}>
-              <h3>Jorai Bugyal</h3>
-              <p>A hidden Himalayan meadow surrounded by scenic peaks.</p>
-            </div>
-          </div>
-
-          <div className={styles.trekCard}>
-            <img src={dodital} alt="Dodital Trek" />
-            <div className={styles.trekContent}>
-              <h3>Dodital Trek</h3>
-              <p>A peaceful trek leading to the beautiful Dodital lake.</p>
-            </div>
-          </div>
-
-          <div className={styles.trekCard}>
-            <img src={gomukh} alt="Gomukh Tapovan Trek" />
-            <div className={styles.trekContent}>
-              <h3>Gomukh Tapovan Trek</h3>
-              <p>
-                One of the most famous Himalayan treks leading to the source of
-                the Ganga at Gomukh and the stunning Tapovan meadows.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.trekCard}>
-            <img src={tungnath} alt="tungnath Trek" className={styles.tungnathImg}/>
-            <div className={styles.trekContent}>
-              <h3>Tungnath Trek</h3>
-              <p>
-                A scenic Himalayan trek leading to Tungnath, the highest Shiva
-                temple in the world, offering breathtaking views of the
-                Chaukhamba peaks and a serene spiritual experience.
-              </p>
-            </div>
-          </div>
+              <div className={styles.cardContent}>
+                <h3>{trek.name}</h3>
+                <p>{trek.desc}</p>
+                <button className={styles.trekBtn}>View Details</button>
+              </div>
+            </article>
+          ))}
         </div>
+
       </div>
     </section>
   );
