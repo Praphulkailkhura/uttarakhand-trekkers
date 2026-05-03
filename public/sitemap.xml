@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- HOME -->
+  <url>
+    <loc>https://uttarakhandtrekkers.com/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- MAIN PAGES -->
+  <url>
+    <loc>https://uttarakhandtrekkers.com/NelongValleyPermit</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/treks</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/services</loc>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/about</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- TREK BLOG PAGES -->
+  <url>
+    <loc>https://uttarakhandtrekkers.com/treks/dayara-bugyal-trek</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/treks/jorai-bugyal-trek</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/treks/dodital-trek</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/treks/gomukh-tapovan-trek</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://uttarakhandtrekkers.com/treks/tungnath-trek</loc>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

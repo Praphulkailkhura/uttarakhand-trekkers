@@ -1,8 +1,8 @@
-import DayaraImage from "../../assets/treks/dayara.jpg"
-import DoditalImage from "../../assets/treks/dodital.jpg"
-import JoraiImage from "../../assets/treks/jorai.jpg"
-import GomukhImage from "../../assets/treks/gomukh.jpg"
-import TungnathImage from "../../assets/treks/tungnath.jpg"
+import DayaraImage from "../../assets/treks/dayaraImage.jpeg"
+import DoditalImage from "../../assets/treks/doditalImage.jpg"
+import JoraiImage from "../../assets/treks/joraiImage.jpeg"
+import GomukhImage from "../../assets/treks/gomukhImage.jpeg"
+import TungnathImage from "../../assets/treks/tungnathImage.jpg"
 
 
 const treksData = [
